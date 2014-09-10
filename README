@@ -45,9 +45,9 @@ SYNOPSIS
 DESCRIPTION
     Due to familiarity with class-based languages such as Java, many
     programmers assume that object-oriented programming is synonymous with
-    class-based programming. However, class-based programming is just one
-    kind of object-oriented programming style, and other varieties exist
-    such as role-oriented, aspect-oriented and prototype-based programming.
+    class-based programming. However, class-based programming is just one kind
+    of object-oriented programming style, and other varieties exist such as
+    role-oriented, aspect-oriented and prototype-based programming.
 
     A prominent example of a prototype-based programming language is
     ECMAScript (a.k.a. Javascript/JScript/ActionScript). ECMAScript does
@@ -63,10 +63,10 @@ DESCRIPTION
     objects. But it's often useful to be able to magic up an object out of
     nowhere. MooseX::Prototype provides a convenience function to do this:
 
-    "object \%attrs"
-        Creates a new object with the given attributes. The hash is treated
-        as attribute-name, attribute-value pairs, but any names beginning
-        with "&" are installed as methods. For example:
+    `object \%attrs`
+        Creates a new object with the given attributes. The hash is treated as
+        attribute-name, attribute-value pairs, but any names beginning with
+        "&" are installed as methods. For example:
 
            my $person = object {
               "name"         => "Robert",
@@ -77,27 +77,27 @@ DESCRIPTION
            };
 
         Objects created this way inherit from Moose::Object and perform the
-        "MooseX::Prototype::Trait::Object" role.
+        `MooseX::Prototype::Trait::Object` role.
 
   Creating Objects from a Prototype
     A prototype is just an object. When you create a new object from it, the
     prototype will be cloned and the new object will inherit all its
     attributes and methods.
 
-    "$prototype->new(%attrs)"
+    `$prototype->new(%attrs)`
         Creates a new object which inherits its methods and attributes from
         $prototype. The %attrs hash can override attribute values from the
         prototype, but cannot add new attributes or methods.
 
-        This method is provided by the "MooseX::Prototype::Trait::Object"
+        This method is provided by the `MooseX::Prototype::Trait::Object`
         role, so $prototype must perform that role.
 
-    "$prototype->create_class"
+    `$prototype->create_class`
         Rather than creating a new object from a prototype, this creates a
-        whole new Moose class which can be used to instantiate objects. If
-        you need to create a whole bunch of objects from a prototype, it is
+        whole new Moose class which can be used to instantiate objects. If you
+        need to create a whole bunch of objects from a prototype, it is
         probably more efficient to create a class and use that, rather than
-        just calling "new" a bunch of times.
+        just calling `new` a bunch of times.
 
         The class can be given a name, a la:
 
@@ -105,12 +105,12 @@ DESCRIPTION
 
         Otherwise an arbitary name will be generated and returned.
 
-        This method is provided by the "MooseX::Prototype::Trait::Object"
+        This method is provided by the `MooseX::Prototype::Trait::Object`
         role, so $prototype must perform that role.
 
-    "create_class_from_prototype($prototype)"
+    `create_class_from_prototype($prototype)`
         A convenience function allowing you to use arbitary Moose objects
-        (which lack the "create_class" method) as prototypes.
+        (which lack the `create_class` method) as prototypes.
 
         Also note:
 
@@ -130,14 +130,14 @@ DESCRIPTION
     In MooseX::Prototype, there is an explicit syntax for adding new
     attributes and methods to an object.
 
-    "$object->extend(\%attrs)"
+    `$object->extend(\%attrs)`
         As per ex-nihilo object creation, the attribute hashref can define
         attribute name-value pairs, or new methods with a leading "&".
 
 HISTORY
     Version 0.001 of MooseX::Prototype consisted of just a single function,
-    "use_as_prototype" which was much the same as
-    "create_class_from_prototype".
+    `use_as_prototype` which was much the same as
+    `create_class_from_prototype`.
 
     Version 0.002 is an almost complete rewrite.
 
@@ -154,8 +154,8 @@ AUTHOR
 COPYRIGHT AND LICENCE
     This software is copyright (c) 2012 by Toby Inkster.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software; you can redistribute it and/or modify it under the
+    same terms as the Perl 5 programming language system itself.
 
 DISCLAIMER OF WARRANTIES
     THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
