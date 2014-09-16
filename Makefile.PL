@@ -7,7 +7,7 @@ my $meta = {
   "abstract"       => "prototype-based programming for Moose",
   "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
-  "generated_by"   => "Moose::Meta::Class::__ANON__::SERIAL::8 version , CPAN::Meta::Converter version 2.140640",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.021, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -22,17 +22,17 @@ my $meta = {
                           requires => {
                             "Data::OptList" => 0,
                             "Moose" => "2.00",
+                            "perl" => 5.008,
                             "Sub::Exporter" => 0,
-                            "thanks" => 0,
                           },
                         },
                         test => { requires => { "Test::More" => 0.61 } },
                       },
   "provides"       => {
-                        "MooseX::Prototype"                    => { file => "lib/MooseX/Prototype.pm", version => 0.003 },
-                        "MooseX::Prototype::Trait::Object"     => { file => "lib/MooseX/Prototype.pm", version => 0.003 },
-                        "MooseX::Prototype::Trait::Object::RO" => { file => "lib/MooseX/Prototype.pm", version => 0.003 },
-                        "MooseX::Prototype::Trait::Object::RW" => { file => "lib/MooseX/Prototype.pm", version => 0.003 },
+                        "MooseX::Prototype"                    => { file => "lib/MooseX/Prototype.pm", version => 0.004 },
+                        "MooseX::Prototype::Trait::Object"     => { file => "lib/MooseX/Prototype.pm", version => 0.004 },
+                        "MooseX::Prototype::Trait::Object::RO" => { file => "lib/MooseX/Prototype.pm", version => 0.004 },
+                        "MooseX::Prototype::Trait::Object::RW" => { file => "lib/MooseX/Prototype.pm", version => 0.004 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -41,9 +41,15 @@ my $meta = {
                                         },
                         homepage     => "https://metacpan.org/release/MooseX-Prototype",
                         license      => ["http://dev.perl.org/licenses/"],
-                        X_identifier => "http://purl.org/NET/cpan-uri/dist/MooseX-Prototype/project",
+                        repository   => {
+                                          type => "git",
+                                          url  => "git://github.com/tobyink/p5-moosex-prototype.git",
+                                          web  => "https://github.com/tobyink/p5-moosex-prototype",
+                                        },
+                        x_identifier => "http://purl.org/NET/cpan-uri/dist/MooseX-Prototype/project",
+                        x_IRC        => "irc://irc.perl.org/#moose",
                       },
-  "version"        => 0.003,
+  "version"        => 0.004,
 };
 
 my %dynamic_config;

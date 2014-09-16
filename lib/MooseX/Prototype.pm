@@ -5,7 +5,6 @@ use warnings;
 use Moose                  2.00 ();
 use Data::OptList          0    ();
 use Sub::Exporter          0    ();
-use thanks                 0    ();
 
 my $serial = 0;
 my $serial_name = sub {
@@ -35,8 +34,8 @@ my $cloned_attributes = sub {
 BEGIN {
 	package MooseX::Prototype;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.003';
-	no thanks;
+	our $VERSION   = '0.004';
+	$INC{'MooseX/Prototype.pm'} = __FILE__;
 
 	use Sub::Exporter -setup => {
 		exports => [
@@ -122,8 +121,8 @@ BEGIN {
 BEGIN {
 	package MooseX::Prototype::Trait::Object;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.003';
-	no thanks;
+	our $VERSION   = '0.004';
+	$INC{'MooseX/Prototype/Trait/Object.pm'} = __FILE__;
 	
 	use Moose::Role;
 	
@@ -188,8 +187,8 @@ BEGIN {
 BEGIN {
 	package MooseX::Prototype::Trait::Object::RO;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.003';
-	no thanks;
+	our $VERSION   = '0.004';
+	$INC{'MooseX/Prototype/Trait/Object/RO.pm'} = __FILE__;
 	use Moose::Role;
 	with qw( MooseX::Prototype::Trait::Object );
 	sub _attribute_accessor_type { 'ro' };
@@ -198,8 +197,8 @@ BEGIN {
 BEGIN {
 	package MooseX::Prototype::Trait::Object::RW;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.003';
-	no thanks;
+	our $VERSION   = '0.004';
+	$INC{'MooseX/Prototype/Trait/Object/RW.pm'} = __FILE__;
 	use Moose::Role;
 	with qw( MooseX::Prototype::Trait::Object );
 	sub _attribute_accessor_type { 'rw' };
